@@ -5,7 +5,7 @@ Data Science & Analytics Project Definition (Template):
 
 Updated: 2024.04.10
 
-Project Name: a descriptive title (should be "catchy" for marketing purposes)
+Project Name: Doctor's Note Summarizer
 
 Project and Work Product Description:  (should be 1 CONCISE paragraph, 3-7 sentences)
 	• Answer "This project / work product (solution) fills these gaps... 
