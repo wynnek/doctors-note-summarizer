@@ -31,6 +31,7 @@ a doctor's report in .txt, .docx, or .xlsx format. The app then reads the report
 writes the summary to a .txt, .docx, or .xlsx file.
 """
 
+import streamlit as st
 from faker import Faker
 import pandas as pd
 import tempfile
@@ -38,7 +39,6 @@ from docx import Document
 from openpyxl import load_workbook
 import os
 import nltk
-import streamlit as st
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 

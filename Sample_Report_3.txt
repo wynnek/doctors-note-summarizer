@@ -1,0 +1,31 @@
+Patient Name: Michael Johnson
+
+Date of Birth: March 20, 1980
+
+Date of Consultation: April 12, 2024
+
+Chief Complaint:
+
+The patient presents with multiple pigmented lesions on the skin, with concerns regarding changes in size, shape, and color of certain moles.
+
+History of Present Illness:
+
+Mr. Johnson is a 44-year-old male with a history of intermittent sun exposure and outdoor activities. He reports noticing changes in several moles over the past few months, including asymmetry, irregular borders, variegated coloration, and diameter exceeding 6 millimeters. There is no history of significant sunburns, personal or family history of melanoma, or immunosuppressive conditions.
+
+Physical Examination:
+
+Upon examination, multiple pigmented lesions are noted on sun-exposed areas of the skin, including the face, neck, arms, and back. Several moles exhibit features concerning for melanoma, such as asymmetry, irregular borders, color variegation, and diameter greater than 6 millimeters. Dermoscopy examination reveals characteristic structures such as asymmetrical pigmentation, irregular network, and blue-white structures suggestive of melanocytic proliferation.
+
+Diagnosis:
+
+Based on the clinical presentation and dermoscopic findings, the patient is diagnosed with dysplastic nevi syndrome with features concerning for malignant transformation, warranting further evaluation for melanoma.
+
+Assessment and Plan:
+
+Excisional Biopsy: Suspicious lesions will be targeted for excisional biopsy with appropriate margins to obtain tissue samples for histopathological examination and definitive diagnosis.
+Total Body Photography: Comprehensive documentation of all pigmented lesions will be performed using total body photography to facilitate monitoring for changes over time and early detection of melanoma.
+Patient Education: Mr. Johnson will receive education regarding the ABCDEs of melanoma detection, sun protection measures, and regular skin self-examinations to promote early detection and reduce the risk of progression to advanced disease.
+Dermatologic Surveillance: Regular follow-up appointments will be scheduled for dermatologic surveillance, with close monitoring of high-risk lesions and consideration of adjunctive imaging modalities such as reflectance confocal microscopy or sequential digital dermoscopy imaging.
+Prognosis:
+
+The prognosis for dysplastic nevi syndrome is generally favorable with early detection and appropriate management. However, the risk of malignant transformation necessitates vigilant surveillance and proactive intervention to minimize the risk of progression to melanoma.
