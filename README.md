@@ -1,19 +1,9 @@
 # doctors-note-summarizer
-This tool takes a doctor's note and summarizes it in a way that is easy to understand
-
-Data Science & Analytics Project Definition (Template):
-
-Updated: 2024.04.10
-
 Project Name: Doctor's Note Summarizer
 
-Project and Work Product Description:  (should be 1 CONCISE paragraph, 3-7 sentences)
-	• Answer "This project / work product (solution) fills these gaps... 
-	• Main goals and problem(s) it solves.
-	• Problem and Solution Workflow Diagrams (2 flowcharts "AS-IS" and "TO-BE")
+Project and Work Product Description: This project takes a doctor's note and summarizes it in a way that is easy to understand.
 
-    "A problem clearly stated is a problem half-solved." - Dorothea Brande :
-
+Problem and Solution Workflow Diagrams (2 flowcharts "AS-IS" and "TO-BE")
 
 Description of Solution:  (should be CONCISE, 3-7 sentences)
 	• Software functions for solving problem(s) step by step.
@@ -41,19 +31,4 @@ Application Instructions:
             Configuration, data sets, URLs, input and output folder structure, etc. 
             conda environment create and package installation batch script
             
-    • Additional Important Guidelines for Product Usability (for others to use your work products:
-
-
-Rich's 6 D Agile Process:
-
-    Idea8
-    Define
-    Design
-    Develop
-    Debug
-    Document
-    Deliver
-    Deploy
-
-Jinja2 
-Jinja3 ==> Jinja 
+    • Additional Important Guidelines for Product Usability (for others to use your work products):
