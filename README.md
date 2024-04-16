@@ -1,34 +1,33 @@
-# doctors-note-summarizer
-Project Name: Doctor's Note Summarizer
+# Doctor's Note Summarizer
+Start Date: 11th April 2024
 
-Project and Work Product Description: This project takes a doctor's note and summarizes it in a way that is easy to understand.
+# Project Description
 
-Problem and Solution Workflow Diagrams (2 flowcharts "AS-IS" and "TO-BE")
+> This project takes a doctor's note and summarizes it in a way that is easy for the patient to understand.
 
-Description of Solution:  (should be CONCISE, 3-7 sentences)
-	• Software functions for solving problem(s) step by step.
-	• Workflow diagram of future ("TO-BE") state (improved processes from your solution).
-	• "Minimum Viable Product" (MVP) 1.0 delivered.  (V1.x delivered beyond MVP V1.0?)
-	• Later MVP, i.e., v2, v3, vN+ functionality to be delivered? 
-    • Additional requirements, Graphical User Interfaces (GUI), usability, etc. for later versions
-    
-Solution Design (high-level):
+Github Link: https://github.com/wynnek/doctors-note-summarizer
 
-Solution Code Description (low-level design): 
-	• Describe code (to help users understand it.)
-    • Software packages (Python packages, etc.)
-	• Hyperlinks to actual complete code  
+# GOALS
+> Extract data from a txt file doctor’s report.
 
-Actual Working Product Code: 
-    Functions, modules, packages, documentation 
-    
-Application Instructions:
+> Using the python packages to parse the report word for word.
 
-    • Step-by-step instructions for OTHERS:
-        Instructions to install, set-up, and use your software:
-        Everything needed to get your solution working.   
-            Software packages and tools
-            Configuration, data sets, URLs, input and output folder structure, etc. 
-            conda environment create and package installation batch script
-            
-    • Additional Important Guidelines for Product Usability (for others to use your work products):
+> Create a summarized text file of a simpler English format.
+
+# Required Packages
+--- streamlit
+--- Faker
+--- NLTK
+--- Pandas
+--- Tempfile
+--- Python-docx
+--- openpyxl
+
+# MILESTONES
+
+## Completed:
+	1) A code has been developed
+	2) Fake file is successfully selected by the code to be parsed
+	3) Output of the code is a summary.txt file
+
+## To Be Done:
