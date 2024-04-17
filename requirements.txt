@@ -1,7 +1,0 @@
-streamlit
-Faker
-pandas
-python
-python-docx
-openpyxl
-nltk
