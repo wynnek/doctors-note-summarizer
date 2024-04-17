@@ -1,7 +1,7 @@
 streamlit
 Faker
 pandas
-tempfile
+python
 python-docx
 openpyxl
 nltk
