@@ -1,36 +1,3 @@
-"""
-This Python script uses the Faker, pandas, docx, nltk, and streamlit libraries to generate, process, and
-summarize fake doctor's reports.
-
-Here's a summary of what the script does:
-
-1. **Imports necessary libraries**: The script begins by importing the necessary Python libraries. Faker 
-is used to generate fake data, pandas is used for data manipulation, docx is used to read and write Word 
-documents, nltk is used for natural language processing, and streamlit is used to create a web app.
-
-2. **Initializes Faker**: Faker is a Python package that generates fake data. In this script, it's used to 
-generate fake doctor's reports.
-
-3. **Generates a fake doctor's report and saves it to a text file, Word file, and Excel file**: The script 
-uses Faker to generate a fake doctor's report, which it then writes to a text file, Word document, and Excel file.
-
-4. **Downloads necessary NLTK data**: The script uses the nltk library to download the 'punkt' and 'stopwords' 
-datasets, which are used for tokenizing text and filtering out common words, respectively.
-
-5. **Loads and reads files**: The script includes functions to load and read text files, Word documents, and 
-Excel files. These functions are used to read the doctor's reports that were previously saved.
-
-6. **Summarizes reports**: The script includes a function to summarize a report. This function tokenizes the 
-text, filters out common words, and identifies the most important sentences to include in the summary.
-
-7. **Writes summaries to files**: The script includes functions to write the summaries to text files, Word 
-documents, and Excel files.
-
-8. **Creates a Streamlit app**: The script uses Streamlit to create a web app that allows users to upload 
-a doctor's report in .txt, .docx, or .xlsx format. The app then reads the report, generates a summary, and 
-writes the summary to a .txt, .docx, or .xlsx file.
-"""
-
 import streamlit as st
 from faker import Faker
 import pandas as pd
