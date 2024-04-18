@@ -30,10 +30,18 @@ In the completed version 1.0 of this project:
 
 * Later MVP, i.e., v2, v3, vN+ functionality to be delivered
 For future enhancements, in the next versions of this project:
-Version 2.0: Fake doctor's notes can be generated dynamically on the fly to be selected by the user as input text files
-Version 3.0: Read handwriting images
-Version 4.0: Output voice audio
-Version 5.0: Doctor's Note to MRI person or other nurse
+  * Version 1.1: Clean up Technical Debt
+    * Inform user that .txt files is the only file type accepted. Git pull the latest code, make changes, then git push on GitHub Desktop    (
+    *  Cleanup Code - remove code references to deprecated feature (no longer accepting input .docx and .xlsx files) and make sure it's still working after cleanup
+    * Fine tune output file (summary.txt) - make it look professional
+    * Fix bug where output file (summary.txt) is being overwritten without user permission (SOLUTION: Create output files with DATETIME)
+  * Version 1.5: Quality Assurance
+    * QA the Input files - Make sure the ChatGPT input files make sense (Sample_Report files)
+    * QA the Output file - Make sure the AI returned good data (actual easy English summary of doctor's note)
+  * Version 2.0: Generate fake doctor's notes dynamically, so they can be selected by the user as input text files
+  * Version 3.0: Read handwriting images
+  * Version 4.0: Output voice audio
+  * Version 5.0: Doctor's Note to MRI person or other nurse
 
 ## Solution Design (high-level):
 
