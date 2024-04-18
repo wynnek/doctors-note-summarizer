@@ -124,7 +124,7 @@ def write_to_xlsx(summary):
 st.title('Doctor\'s Report Summarizer')
 st.markdown("This App reads in or analyze an existing patient's report written by the doctor, then write it into "
             "a more easily readable format, without the heavy technical medical or health-related terminologies") 
-st.markdown("Please upload a doctor's report in .txt, .docx, or .xlsx format to get started.")
+st.markdown("Please upload a doctor's report in .txt format to get started.  \nNote: ONLY txt format is accepted at this time.")
 
 file = st.file_uploader('Upload a doctor\'s report', type=['txt', 'docx', 'xlsx'])
 
