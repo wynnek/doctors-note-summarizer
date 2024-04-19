@@ -1,29 +1,10 @@
 import streamlit as st
-from faker import Faker
-import pandas as pd
-import tempfile
-from docx import Document
-from openpyxl import load_workbook
 import os
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-
-# Initialize Faker
-fake = Faker()
-
-# Generate a fake doctor's report and save it to a text file
-with open('doctors_report.txt', 'w') as f:
-    f.write(fake.text())
-
-# Generate a fake doctor's report and save it to a Word file
-doc = Document()
-doc.add_paragraph(fake.text())
-doc.save('doctors_report.docx')
-
-# Generate a fake doctor's report and save it to an Excel file
-df = pd.DataFrame({'Report': [fake.text()]})
-df.to_excel('doctors_report.xlsx', index=False)
+import io
+import re
 
 # Check if the necessary NLTK packages are downloaded
 def check_nltk_packages():
@@ -39,30 +20,16 @@ check_nltk_packages()
 
 # Function to load and read a text file
 def load_and_read_txt(file):
-    return file.getvalue().decode('utf-8')
+    report = file.getvalue().decode('utf-8')
+    
+    # Extract the patient's name
+    patient_name = None
+    for line in report.split('\n'):
+        if line.startswith('Patient Name:'):
+            patient_name = line.split(':')[-1].strip()
+            break
 
-def load_and_read_docx(file):
-    with tempfile.NamedTemporaryFile(delete=False, suffix='.docx') as temp:
-        temp.write(file.getbuffer())
-        temp_path = temp.name
-
-    doc = Document(temp_path)
-    text = ' '.join([paragraph.text for paragraph in doc.paragraphs])
-
-    # Delete the temporary file
-    os.remove(temp_path)
-
-    return text
-
-# Function to load and read an Excel file
-def load_and_read_xlsx(file):
-    wb = load_workbook(filename=file)
-    ws = wb.active
-    data = ws.values
-    cols = next(data)
-    data_rows = list(data)
-    df = pd.DataFrame(data_rows, columns=cols)
-    return ' '.join(df.to_string(index=False).split('\n'))
+    return report, patient_name
 
 # Function to summarize a report
 def summarize_report(report):
@@ -104,47 +71,42 @@ def summarize_report(report):
     return summary
 
 # Function to write a summary to a text file
-def write_to_txt(summary):
-    with open('summary.txt', 'w') as f:
-        f.write(summary)
+def write_to_txt(summary, patient_name):
+    # Create the directory if it does not exist
+    if not os.path.exists('summary_reports'):
+        os.makedirs('summary_reports')
 
-# Function to write a summary to a Word file
-def write_to_docx(summary):
-    doc = Document()
-    doc.add_paragraph(summary)
-    with open('summary.docx', 'wb') as f:
-        doc.save(f)
+    # Format the patient name
+    patient_name = patient_name.replace(' ', '_')
 
-# Function to write a summary to an Excel file
-def write_to_xlsx(summary):
-    df = pd.DataFrame({'Summary': [summary]})
-    df.to_excel('summary.xlsx', index=False)
+    # Remove leading space
+    summary = summary.lstrip()
 
+    # Format the summary
+    headers = ['Patient Name', 'Date of Birth', 'Date of Consultation']
+    for header in headers:
+        summary = summary.replace(f'{header} :', f'{header}:')
+    formatted_summary = summary.replace('\n:', ':')
+    sentences = nltk.tokenize.sent_tokenize(formatted_summary)
+    formatted_summary = '\n\n'.join(sentences)
+
+    output_path = os.path.join('summary_reports', f"{patient_name}_Summary.txt")
+    with open(output_path, 'w') as f:
+        f.write(formatted_summary)
+
+    
 # Streamlit app
-st.title('Doctor\'s Report Summarizer')
-st.markdown("This App reads in or analyze an existing patient's report written by the doctor, then write it into "
-            "a more easily readable format, without the heavy technical medical or health-related terminologies") 
-st.markdown("Please upload a doctor's report in .txt format to get started.  \nNote: ONLY txt format is accepted at this time.")
+st.title('Patient\'s Medical Report Summarizer')
+st.markdown("This App reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies") 
+st.markdown("Please upload a patient's medical report in .txt format to get started.")
 
-file = st.file_uploader('Upload a doctor\'s report', type=['txt', 'docx', 'xlsx'])
+file = st.file_uploader('Upload a patient\'s medical report', type=['txt'])
 
 if file is not None:
-    if file.type == 'text/plain':
-        report = load_and_read_txt(file)
-        summary = summarize_report(report)
-        print(summary)  # Add this line
-        write_to_txt(summary)
-    elif file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
-        report = load_and_read_docx(file)
-        summary = summarize_report(report)
-        print(summary)  # Add this line
-        write_to_docx(summary)
-    elif file.type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
-        report = load_and_read_xlsx(file)
-        summary = summarize_report(report)
-        print(summary)  # Add this line
-        write_to_xlsx(summary)
+    report, patient_name = load_and_read_txt(file)
+    summary = summarize_report(report)
+    if patient_name:
+        write_to_txt(summary, patient_name)
+        st.write(summary)
     else:
-        st.write('Unsupported file type')
-
-    st.write(summary)
+        st.write("Could not extract patient's name from the report.")

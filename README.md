@@ -89,3 +89,16 @@ Here are the step-by-step instructions to install, set up, and use this project:
 > activate doctors_note_env
   * To run the project
 > streamlit run Doc_Rpt_Writer.py
+
+
+#############Added by MMBOSTON: Take whatever you want and remove rests!!
+
+Improved Text Formatting: Updated the write_to_txt function in Doc_Rpt_Writer.py to improve the formatting of the output text. The function now correctly handles abbreviations like "Ms." and does not break the line after them. This was achieved by using the nltk.tokenize.sent_tokenize function to split the summary into sentences.
+
+Removed Leading Spaces: Modified the write_to_txt function to remove any leading spaces from the summary.
+
+Updated Header Formatting: Adjusted the formatting of the headers in the summary. The values of the headers "Patient Name", "Date of Birth", and "Date of Consultation" are now on the same line as the headers themselves, rather than on a new line.
+
+Created Summary Reports Directory: Updated the write_to_txt function to create a directory named 'summary_reports' if it does not already exist. This is where the function saves the formatted summary reports.
+
+Streamlit App Description: Updated the description of the Streamlit app in Doc_Rpt_Writer.py to provide more information about what the app does. The app reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies.
