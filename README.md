@@ -31,10 +31,16 @@ In the completed version 1.0 of this project:
 * Later MVP, i.e., v2, v3, vN+ functionality to be delivered
 For future enhancements, in the next versions of this project:
   * Version 1.1: Clean up Technical Debt
-    * Inform user that .txt files is the only file type accepted. Git pull the latest code, make changes, then git push on GitHub Desktop    (
-    *  Cleanup Code - remove code references to deprecated feature (no longer accepting input .docx and .xlsx files) and make sure it's still working after cleanup
-    * Fine tune output file (summary.txt) - make it look professional
-    * Fix bug where output file (summary.txt) is being overwritten without user permission (SOLUTION: Create output files with DATETIME)
+    * Inform the user that .txt files are the only file type accepted
+    * Cleanup Code - remove code references to a deprecated feature (we are no longer accepting .docx and .xlsx file input)
+    * Fine-tune output files
+    * Create output files with DATETIME
+    * Improved Text Formatting: Updated the write_to_txt function in Doc_Rpt_Writer.py to improve the formatting of the output text. The function now correctly handles abbreviations like "Ms." and does not break the line after them. This was achieved by using the nltk.tokenize.sent_tokenize function to split the summary into sentences.
+    * Removed Leading Spaces: Modified the write_to_txt function to remove any leading spaces from the summary.
+    * Updated Header Formatting: Adjusted the formatting of the headers in the summary. The values of the headers "Patient Name", "Date of Birth", and "Date of Consultation" are now on the same line as the headers themselves, rather than on a new line.
+    * Created Summary Reports Directory: Updated the write_to_txt function to create a directory named 'summary-reports' if it does not already exist. This is where the function saves the formatted summary reports.
+    * Inform the user to provide more information about what the app does. The app reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies.
+
   * Version 1.5: Quality Assurance
     * QA the Input files - Make sure the ChatGPT input files make sense (Sample_Report files)
     * QA the Output file - Make sure the AI returned good data (actual easy English summary of doctor's note)
@@ -90,15 +96,3 @@ Here are the step-by-step instructions to install, set up, and use this project:
   * To run the project
 > streamlit run Doc_Rpt_Writer.py
 
-
-#############Added by MMBOSTON: Take whatever you want and remove rests!!
-
-Improved Text Formatting: Updated the write_to_txt function in Doc_Rpt_Writer.py to improve the formatting of the output text. The function now correctly handles abbreviations like "Ms." and does not break the line after them. This was achieved by using the nltk.tokenize.sent_tokenize function to split the summary into sentences.
-
-Removed Leading Spaces: Modified the write_to_txt function to remove any leading spaces from the summary.
-
-Updated Header Formatting: Adjusted the formatting of the headers in the summary. The values of the headers "Patient Name", "Date of Birth", and "Date of Consultation" are now on the same line as the headers themselves, rather than on a new line.
-
-Created Summary Reports Directory: Updated the write_to_txt function to create a directory named 'summary_reports' if it does not already exist. This is where the function saves the formatted summary reports.
-
-Streamlit App Description: Updated the description of the Streamlit app in Doc_Rpt_Writer.py to provide more information about what the app does. The app reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies.
