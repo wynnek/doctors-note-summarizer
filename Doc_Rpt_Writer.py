@@ -73,8 +73,8 @@ def summarize_report(report):
 # Function to write a summary to a text file
 def write_to_txt(summary, patient_name):
     # Create the directory if it does not exist
-    if not os.path.exists('summary_reports'):
-        os.makedirs('summary_reports')
+    if not os.path.exists('summary-reports'):
+        os.makedirs('summary-reports')
 
     # Format the patient name
     patient_name = patient_name.replace(' ', '_')
@@ -90,7 +90,7 @@ def write_to_txt(summary, patient_name):
     sentences = nltk.tokenize.sent_tokenize(formatted_summary)
     formatted_summary = '\n\n'.join(sentences)
 
-    output_path = os.path.join('summary_reports', f"{patient_name}_Summary.txt")
+    output_path = os.path.join('summary-reports', f"{patient_name}_Summary.txt")
     with open(output_path, 'w') as f:
         f.write(formatted_summary)
 

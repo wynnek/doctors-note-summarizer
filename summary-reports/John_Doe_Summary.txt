@@ -1,0 +1,20 @@
+Patient Name: John Doe  
+Date of Birth: January 1, 1980  
+Date of Consultation: April 12, 2024
+
+Chief Complaint:  
+The patient presents with chronic, progressive pain in the right shoulder region, exacerbated by overhead activities and reaching movements.
+
+Physical Examination:  
+Upon examination, there is tenderness noted over the anterior and lateral aspect of the right shoulder joint.
+
+Diagnosis:  
+Based on the clinical presentation and physical examination findings, the patient is diagnosed with right shoulder impingement syndrome.
+
+Conservative Management: The patient will be initiated on a comprehensive rehabilitation program focusing on pain relief, restoration of range of motion, and strengthening of the rotator cuff and scapular stabilizers.
+
+Corticosteroid Injection: In cases of persistent pain and inflammation, a subacromial corticosteroid injection may be considered to provide short-term relief and facilitate participation in rehabilitation.
+
+Follow-up: The patient will be scheduled for regular follow-up appointments to assess response to treatment, monitor progress, and adjust management strategies as needed.
+
+With diligent adherence to treatment recommendations and gradual return to activity, Mr. Doe can expect significant improvement in pain and function over the coming weeks to months.

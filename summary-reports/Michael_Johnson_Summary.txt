@@ -1,0 +1,17 @@
+Patient Name: Michael Johnson
+
+Date of Birth: March 20, 1980
+
+Date of Consultation: April 12, 2024
+
+Chief Complaint:
+
+The patient presents with multiple pigmented lesions on the skin, with concerns regarding changes in size, shape, and color of certain moles.
+
+Diagnosis:
+
+Based on the clinical presentation and dermoscopic findings, the patient is diagnosed with dysplastic nevi syndrome with features concerning for malignant transformation, warranting further evaluation for melanoma.
+
+Patient Education: Mr. Johnson will receive education regarding the ABCDEs of melanoma detection, sun protection measures, and regular skin self-examinations to promote early detection and reduce the risk of progression to advanced disease.
+
+Dermatologic Surveillance: Regular follow-up appointments will be scheduled for dermatologic surveillance, with close monitoring of high-risk lesions and consideration of adjunctive imaging modalities such as reflectance confocal microscopy or sequential digital dermoscopy imaging.
