@@ -10,7 +10,7 @@ A doctor or other healthcare provider may write a note to describe a health care
 
 | The Project As-Is: | The Project To-Be: |
 | --------------- | --------------- |
-| Diagram 1 | Diagram 2 |
+| ![image info](./diagrams/diagram1.png) | ![image info](./diagrams/diagram2.png) |
 | **File Format:** Input any text file (.txt). Output a text file (.txt). | **File Format:** Input text and images of a doctor's handwritten notes. Output simplified English text with voice audio option |
 | **Python Packages:** NLTK | **Python Packages:** TensorFlow/Keras, NLTK |
 
@@ -20,7 +20,7 @@ We use artificial intelligence (AI) and the Python programming language to simpl
 
 * Workflow Diagram
 
-  * Workflow diagram of future ("TO-BE") state (improved processes from your solution).
+  ![image info](./diagrams/diagram2.png)
 
 * Minimum Viable Product (MVP) 1.0 delivered:
 In the completed version 1.0 of this project:
