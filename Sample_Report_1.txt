@@ -1,34 +1,30 @@
-Certainly, here's a sample fake doctor's report on a patient diagnosed with shoulder impingement:
+Patient Name: John Doe  
+Date of Birth: January 1, 1980  
+Date of Consultation: April 12, 2024
 
-* * *
-
-**Patient Name:** John Doe  
-**Date of Birth:** January 1, 1980  
-**Date of Consultation:** April 12, 2024
-
-**Chief Complaint:**  
+Chief Complaint:  
 The patient presents with chronic, progressive pain in the right shoulder region, exacerbated by overhead activities and reaching movements. The pain is described as dull and aching, radiating down the lateral aspect of the arm.
 
-**History of Present Illness:**  
+History of Present Illness:  
 Mr. Doe is a 44-year-old male with a history of moderate physical activity involving overhead lifting and repetitive shoulder movements. He reports a gradual onset of symptoms over the past 6 months, with no significant history of trauma or previous shoulder pathology. The pain has progressively worsened, impairing his ability to perform activities of daily living and impacting his sleep quality.
 
-**Physical Examination:**  
+Physical Examination:  
 Upon examination, there is tenderness noted over the anterior and lateral aspect of the right shoulder joint. Range of motion testing reveals limited abduction and external rotation, with reproduction of symptoms upon impingement testing, specifically Neer's and Hawkins-Kennedy maneuvers. Muscle strength testing demonstrates mild weakness in the supraspinatus and infraspinatus muscles. No evidence of atrophy or instability is appreciated.
 
-**Diagnosis:**  
+Diagnosis:  
 Based on the clinical presentation and physical examination findings, the patient is diagnosed with right shoulder impingement syndrome. This is characterized by compression of the subacromial structures, including the rotator cuff tendons and subacromial bursa, resulting in pain and functional limitations.
 
-**Assessment and Plan:**
+Assessment and Plan:
 
-1.  **Conservative Management:** The patient will be initiated on a comprehensive rehabilitation program focusing on pain relief, restoration of range of motion, and strengthening of the rotator cuff and scapular stabilizers. This will include:
+1.  Conservative Management: The patient will be initiated on a comprehensive rehabilitation program focusing on pain relief, restoration of range of motion, and strengthening of the rotator cuff and scapular stabilizers. This will include:
     *   Non-steroidal anti-inflammatory drugs (NSAIDs) for pain relief and inflammation reduction.
     *   Physical therapy modalities such as ultrasound, heat, and ice therapy to alleviate symptoms and promote healing.
     *   Therapeutic exercises targeting the rotator cuff and scapular muscles to improve shoulder biomechanics and prevent recurrence.
     *   Activity modification and ergonomic education to avoid aggravating movements and optimize shoulder function.
-2.  **Corticosteroid Injection:** In cases of persistent pain and inflammation, a subacromial corticosteroid injection may be considered to provide short-term relief and facilitate participation in rehabilitation.
-3.  **Follow-up:** The patient will be scheduled for regular follow-up appointments to assess response to treatment, monitor progress, and adjust management strategies as needed. Surgical intervention may be considered if conservative measures fail to provide adequate relief or in the presence of structural abnormalities such as rotator cuff tears.
+2.  Corticosteroid Injection: In cases of persistent pain and inflammation, a subacromial corticosteroid injection may be considered to provide short-term relief and facilitate participation in rehabilitation.
+3.  Follow-up: The patient will be scheduled for regular follow-up appointments to assess response to treatment, monitor progress, and adjust management strategies as needed. Surgical intervention may be considered if conservative measures fail to provide adequate relief or in the presence of structural abnormalities such as rotator cuff tears.
 
-**Prognosis:**  
+Prognosis:  
 The prognosis for shoulder impingement syndrome is generally favorable with appropriate conservative management. However, the recovery timeline may vary depending on the severity of symptoms, underlying pathology, and patient compliance with rehabilitation protocols. With diligent adherence to treatment recommendations and gradual return to activity, Mr. Doe can expect significant improvement in pain and function over the coming weeks to months.
 
 * * *
