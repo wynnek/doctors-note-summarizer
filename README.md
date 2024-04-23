@@ -6,13 +6,13 @@ This project summarizes a doctor's note in a way that is easy for the patient to
 
 ## Project and Work Product Description:
 
-A doctor or other healthcare provider may write a note to describe a health care visit, telephone call, or other patient interaction. The problem is that the doctor's report is often full of medical terminology and procedural shorthand that is too complex for most patients to understand. Our goal is to make a doctor's note more accessible for their patient to comprehend.
+A doctor or other healthcare provider may write a note to describe a healthcare visit, telephone call, or other patient interaction. The problem is that the doctor's report is often full of medical terminology and procedural shorthand that is too complex for most patients to understand. Our goal is to make a doctor's note more accessible for their patient to comprehend.
 
 | The Project As-Is: | The Project To-Be: |
 | --------------- | --------------- |
 | ![image info](./diagrams/diagram1.png) | ![image info](./diagrams/diagram2.png) |
 | **File Format:** Input any text file (.txt). Output a text file (.txt). | **File Format:** Input text and images of a doctor's handwritten notes. Output simplified English text with voice audio option |
-| **Python Packages:** NLTK | **Python Packages:** TensorFlow/Keras, NLTK |
+| **Python Packages:** NLTK | **Python Packages:** NLTK, OpenCV, TensorFlow/Keras |
 
 ## Description of Solution: 
 
@@ -47,7 +47,7 @@ For future enhancements, in the next versions of this project:
   * Version 2.0: Generate fake doctor's notes dynamically, so they can be selected by the user as input text files
   * Version 3.0: Read handwriting images
   * Version 4.0: Output voice audio
-  * Version 5.0: Doctor's Note to MRI person or other nurse
+  * Version 5.0: Doctor's Note to MRI person or other nurses
 
 ## Solution Design (high-level):
 
