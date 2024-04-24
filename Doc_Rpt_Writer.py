@@ -96,7 +96,7 @@ def write_to_txt(summary, patient_name):
 
     
 # Streamlit app
-st.title('Patient\'s Medical Report Summarizer')
+st.title("Doctor's Note Summarizer")
 st.markdown("This App reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies") 
 st.markdown("Please upload a patient's medical report in .txt format to get started.")
 
