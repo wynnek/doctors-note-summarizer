@@ -1,10 +1,9 @@
+from datetime import datetime
 import streamlit as st
 import os
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-import io
-import re
 
 # Check if the necessary NLTK packages are downloaded
 def check_nltk_packages():
@@ -18,23 +17,12 @@ def check_nltk_packages():
 # Call the function to check and download the necessary NLTK packages
 check_nltk_packages()
 
-# Function to load and read a text file
-def load_and_read_txt(file):
-    report = file.getvalue().decode('utf-8')
+# Function to summarize a medical note
+def summarize_note(medical_note):
     
-    # Extract the patient's name
-    patient_name = None
-    for line in report.split('\n'):
-        if line.startswith('Patient Name:'):
-            patient_name = line.split(':')[-1].strip()
-            break
-
-    return report, patient_name
-
-# Function to summarize a report
-def summarize_report(report):
+    # Use Natural Language Toolkit (NLTK) library to preprocess the text (e.g., tokenization, stemming, removing stop words)
     stopWords = set(stopwords.words("english"))
-    words = word_tokenize(report)
+    words = word_tokenize(medical_note)
 
     freqTable = dict()
     for word in words:
@@ -46,7 +34,7 @@ def summarize_report(report):
         else:
             freqTable[word] = 1
 
-    sentences = sent_tokenize(report)
+    sentences = sent_tokenize(medical_note)
     sentenceValue = dict()
 
     for sentence in sentences:
@@ -71,13 +59,10 @@ def summarize_report(report):
     return summary
 
 # Function to write a summary to a text file
-def write_to_txt(summary, patient_name):
+def write_to_txt(summary):
     # Create the directory if it does not exist
     if not os.path.exists('summary-reports'):
         os.makedirs('summary-reports')
-
-    # Format the patient name
-    patient_name = patient_name.replace(' ', '_')
 
     # Remove leading space
     summary = summary.lstrip()
@@ -90,23 +75,34 @@ def write_to_txt(summary, patient_name):
     sentences = nltk.tokenize.sent_tokenize(formatted_summary)
     formatted_summary = '\n\n'.join(sentences)
 
-    output_path = os.path.join('summary-reports', f"{patient_name}_Summary.txt")
+    # Get the current date and time
+    now = datetime.now()
+
+    # Format the date and time
+    datetime_str = now.strftime("%Y-%m-%d-%H-%M-%S")
+
+    # Write the summary to a file named summary-report-{DATETIME}.txt in the summary-reports folder
+    output_path = os.path.join('summary-reports', f"summary-report-{datetime_str}.txt")
     with open(output_path, 'w') as f:
         f.write(formatted_summary)
 
     
 # Streamlit app
 st.title("Doctor's Note Summarizer")
-st.markdown("This app takes a patient's medical report with the patient's name in it, as a .txt file, and summarizes it (below) in a way that is easy to understand. In the background, this app also saves the summary as a new .txt file with the patient's name in a folder called 'summary_reports' for future reference") 
-st.markdown("Please upload a patient's medical report in .txt format to get started.")
+st.markdown("This app takes a patient's medical report, and summarizes it (below) in a way that is easy to understand.")
+st.markdown("In the background, this app also saves the summary as a new .txt file in a folder called 'summary-reports'") 
 
-file = st.file_uploader('Upload a patient\'s medical report', type=['txt'])
+# Ask for User Input
+medical_note = st.text_area('Enter the medical note here:', '')
 
-if file is not None:
-    report, patient_name = load_and_read_txt(file)
-    summary = summarize_report(report)
-    if patient_name:
-        write_to_txt(summary, patient_name)
-        st.write(summary)
-    else:
-        st.write("Could not extract patient's name from the report.")
+# User must click this button to summarize the note
+if st.button('Summarize'):
+    # Generate the summary
+    summary = summarize_note(medical_note)
+
+    # Output the summary to the page
+    st.markdown("Summary") 
+    st.write(summary)
+
+    # Write the summary to a text file
+    write_to_txt(summary)
