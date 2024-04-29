@@ -11,8 +11,8 @@ A doctor or other healthcare provider may write a note to describe a healthcare 
 | The Project As-Is: | The Project To-Be: |
 | --------------- | --------------- |
 | ![image info](./diagrams/diagram1.png) | ![image info](./diagrams/diagram2.png) |
-| **File Format:** Input any text file (.txt). Output a text file (.txt). | **File Format:** Input text and images of a doctor's handwritten notes. Output simplified English text with voice audio option |
-| **Python Packages:** NLTK | **Python Packages:** NLTK, OpenCV, TensorFlow/Keras |
+| **File Format:** Input any text. Output a summary and save it as a text file (.txt). | **File Format:** Input text and images of a doctor's handwritten notes. Output simplified English text with voice audio option |
+| **Features:** Uses Natural Language Toolkit (NLTK) library to preprocess the text (e.g., tokenization, stemming, removing stop words) | **Features:** Use NLTK to preprocess the text, and TensorFlow/Keras to generate the summary from PubMed dataset. The PubMed dataset contains medical articles and their abstracts, which can be used as summaries |
 
 ## Description of Solution: 
 
@@ -51,34 +51,25 @@ For future enhancements, in the next versions of this project:
 
 ## Solution Design (high-level):
 
-This project uses Faker, pandas, docx, nltk, and streamlit libraries to generate, process, and summarize a doctor's report (input as a .txt file)
+This project uses nltk, and streamlit libraries to generate, process, and summarize a doctor's note
 
 ## Solution Code Description (low-level design): 
 
-1. **First, import the necessary Python libraries.** Faker is used to generate fake data, pandas is used for data manipulation, docx is used to read and write Word 
-documents, nltk is used for natural language processing, and streamlit is used to create a web app.
-2. **Initialize Faker**: Faker is a Python package that generates fake data. In this project, it's used to generate fake doctor's reports.
-3. **Generate Doctor's Note**: This project will use Faker to generate a fake doctor's report, which it then writes to a text file. Currently Doctor's notes were created from ChatGPT and hard-coded as sample files. 
-4. **Downloads necessary NLTK data**: The script uses the nltk library to download the 'punkt' and 'stopwords' 
+1. **Downloads necessary NLTK data**: The script uses the nltk library to download the 'punkt' and 'stopwords' 
 datasets, which are used for tokenizing text and filtering out common words, respectively.
-5. **Loads and reads files**: The script includes functions to load and read text files. These functions are used to read the doctor's reports that were previously saved.
-6. **Summarizes reports**: The script includes a function to summarize a report. This function tokenizes the 
+2. **Summarizes reports**: The script includes a function to summarize a report. This function tokenizes the 
 text, filters out common words, and identifies the most important sentences to include in the summary.
-7. **Writes summaries to files**: The script includes functions to write the summaries to text files
-8. **Creates a Streamlit app**: The script uses Streamlit to create a web app that allows users to upload 
-a doctor's report in .txt, .docx, or .xlsx format. The app then reads the report, generates a summary, and 
+3. **Writes summaries to files**: The script includes functions to write the summaries to text files
+4. **Creates a Streamlit app**: The script uses Streamlit to create a web app. The app reads the report, generates a summary, and 
 writes the summary to a .txt file
 
 ## Actual Working Product Code: 
 
 * The code is available to the public here on this GitHub Repository. 
 * The required packages are:
-  * Faker
   * nltk
-  * openpyxl
-  * pandas
-  * python_docx
   * streamlit
+  * tensorflow (this includes keras and requires python 3.6 to 3.9)
 > See this project in action on Streamlit! Click here: https://doctors-note-summarizer.streamlit.app/
 
 ## Application Instructions:
@@ -88,11 +79,13 @@ Here are the step-by-step instructions to install, set up, and use this project:
 1. Download and install these software tools:
   * Anaconda Navigator
   * Visual Studio Code
-2. Run these command in the Visual Studio Code terminal:
+2. Clone the repository
+3. Run these commands in the Visual Studio Code terminal:
   * To create the conda virtual environment and install required Python packages:
-> conda create -n doctors_note_env -c conda-forge Faker nltk pandas python-docx openpyxl streamlit
-  * To switch into the created environment where all the packages were installed
+> conda create -n doctors_note_env -c conda-forge nltk streamlit python=3.9.17 tensorflow
+  * On Windows, to switch into the created environment where all the packages were installed
 > activate doctors_note_env
-  * To run the project
-> streamlit run Doc_Rpt_Writer.py
-
+  * On Mac, to switch into the created environment where all the packages were installed
+> source activate doctors_note_env
+4. Run the project
+> streamlit run main.py
