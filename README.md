@@ -41,10 +41,9 @@ For future enhancements, in the next versions of this project:
     * Created Summary Reports Directory: Updated the write_to_txt function to create a directory named 'summary-reports' if it does not already exist. This is where the function saves the formatted summary reports.
     * Inform the user to provide more information about what the app does. The app reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies.
 
-  * Version 1.5: Quality Assurance
+  * Version 2.0: Quality Assurance
     * QA the Input files - Make sure the ChatGPT input files make sense (Sample_Report files)
     * QA the Output file - Make sure the AI returned good data (actual easy English summary of doctor's note)
-  * Version 2.0: Generate fake doctor's notes dynamically, so they can be selected by the user as input text files
   * Version 3.0: Read handwriting images
   * Version 4.0: Output voice audio
   * Version 5.0: Doctor's Note to MRI person or other nurses
