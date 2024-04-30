@@ -42,7 +42,7 @@ For future enhancements, in the next versions of this project:
     * Inform the user to provide more information about what the app does. The app reads in a patient's medical report and writes it into a more easily readable format, without the heavy technical medical or health-related terminologies.
 
   * Version 2.0: Quality Assurance
-    * QA the Input files - Make sure the ChatGPT input files make sense (Sample_Report files)
+    * QA the Input files - input makes sense (Sample_Report files)
     * QA the Output file - Make sure the AI returned good data (actual easy English summary of doctor's note)
   * Version 3.0: Read handwriting images
   * Version 4.0: Output voice audio
