@@ -1,5 +1,5 @@
-from datetime import datetime
-import streamlit as st
+from django.shortcuts import render
+from .forms import SummarizerForm
 import os
 import nltk
 from nltk.corpus import stopwords
@@ -58,51 +58,14 @@ def summarize_note(medical_note):
             summary += " " + sentence
     return summary
 
-# Function to write a summary to a text file
-def write_to_txt(summary):
-    # Create the directory if it does not exist
-    if not os.path.exists('summary-reports'):
-        os.makedirs('summary-reports')
-
-    # Remove leading space
-    summary = summary.lstrip()
-
-    # Format the summary
-    headers = ['Patient Name', 'Date of Birth', 'Date of Consultation']
-    for header in headers:
-        summary = summary.replace(f'{header} :', f'{header}:')
-    formatted_summary = summary.replace('\n:', ':')
-    sentences = nltk.tokenize.sent_tokenize(formatted_summary)
-    formatted_summary = '\n\n'.join(sentences)
-
-    # Get the current date and time
-    now = datetime.now()
-
-    # Format the date and time
-    datetime_str = now.strftime("%Y-%m-%d-%H-%M-%S")
-
-    # Write the summary to a file named summary-report-{DATETIME}.txt in the summary-reports folder
-    output_path = os.path.join('summary-reports', f"summary-report-{datetime_str}.txt")
-    with open(output_path, 'w') as f:
-        f.write(formatted_summary)
-
-    
-# Streamlit app
-st.title("Doctor's Note Summarizer")
-st.markdown("This app takes a patient's medical report, and summarizes it (below) in a way that is easy to understand.")
-st.markdown("In the background, this app also saves the summary as a new .txt file in a folder called 'summary-reports'") 
-
-# Ask for User Input
-medical_note = st.text_area('Enter the medical note here:', '')
-
-# User must click this button to summarize the note
-if st.button('Summarize'):
-    # Generate the summary
-    summary = summarize_note(medical_note)
-
-    # Output the summary to the page
-    st.markdown("Summary") 
-    st.write(summary)
-
-    # Write the summary to a text file
-    write_to_txt(summary)
+# View for the summarizer
+def summarizer(request):
+    if request.method == "POST":
+        filled_form = SummarizerForm(request.POST)
+        if filled_form.is_valid():
+            medical_note = filled_form.cleaned_data["text"]
+            summary = medical_note # summarize_note(medical_note)
+            return render(request, "summarizer/home.html", {"summarizerform": filled_form, "summarizednote": summary})
+    else:
+        form = SummarizerForm()
+        return render(request, "summarizer/home.html", {'summarizerform': form})
