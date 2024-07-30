@@ -1,11 +1,7 @@
 asgiref==3.5.2
-#bzip2==1.0.8
-#ca-certificates==2024.7.4
 click==8.1.7
 colorama==0.4.6
 django==4.1
-#expat==2.6.2
-freetype==2.10.4
 joblib==1.4.2
 jpeg==9e
 lcms2==2.12
