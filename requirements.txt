@@ -2,6 +2,7 @@ asgiref
 click
 colorama
 Django
+gunicorn
 joblib
 nltk
 pillow
