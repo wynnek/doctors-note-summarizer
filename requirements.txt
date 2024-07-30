@@ -6,7 +6,6 @@ joblib
 nltk
 pillow
 regex
-setuptools==69.5.1
 sqlparse
 tqdm
 tzdata
