@@ -3,7 +3,6 @@ click==8.1.7
 colorama==0.4.6
 django==4.1
 joblib==1.4.2
-jpeg==9e
 lcms2==2.12
 lerc==3.0
 libdeflate==1.17
