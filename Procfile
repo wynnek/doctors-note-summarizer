@@ -1,1 +1,1 @@
-web:gunicorn doctorsnotesummarizer\doctorsnotesummarizer\doctorsnotesummarizer.wsgi
+web:gunicorn doctorsnotesummarizer/doctorsnotesummarizer/doctorsnotesummarizer.wsgi
