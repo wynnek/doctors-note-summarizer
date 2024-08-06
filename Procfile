@@ -1,1 +1,1 @@
-web:gunicorn doctorsnotesummarizer/doctorsnotesummarizer/doctorsnotesummarizer.wsgi
+web:python doctorsnotesummarizer/manage.py runserver --insecure
