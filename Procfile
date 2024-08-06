@@ -1,1 +1,1 @@
-web:python doctorsnotesummarizer/manage.py runserver --insecure
+web: python doctorsnotesummarizer/manage.py runserver --insecure
