@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-c5$$@$go@$w(yf1n0!m97%i_(34#=42*+1mf9bv822761j2m-&
 DEBUG = False
 
 ALLOWED_HOSTS = ['doctors-note-summarizer-9db6a1c62b84.herokuapp.com', '127.0.0.1', 'localhost'] # ['*']
-CSRF_TRUSTED_ORIGINS = ['doctors-note-summarizer-9db6a1c62b84.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://doctors-note-summarizer-9db6a1c62b84.herokuapp.com']
 
 # Application definition
 
